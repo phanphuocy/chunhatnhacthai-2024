@@ -6,14 +6,40 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <body class="h-screen flex flex-col justify-items-stretch">
+    <header class="border border-gray-100 flex flex-row w-full h-64 p-3">
+      <div class="w-72 flex flex-col grow align-center justify-center px-2">
+        <a class="block" href="/">Chủ Nhật Nhạc Thái</a>
+      </div>
+      <div class="w-full grow flex flex-col px-2">
+        <input type="text" class="w-96 border border-gray-300 rounded-xl" placeholder="Search a song.."/>
+      </div>
+    </header>
+    <section class="border border-gray-100 flex flex-row grow">
+      <aside class="border border-gray-100 w-72 px-1 py-5 h-screen">
+        <nav class="flex flex-col">
+          <ul class="py-3">
+            <li class="flex">
+              <a class="w-full px-4 py-2 rounded hover:cursor-pointer hover:bg-gray-900 hover:text-white" href="/songs">Songs</a>
+            </li>
+            <li class="flex">
+              <a class="w-full px-4 py-2 rounded hover:cursor-pointer hover:bg-gray-900 hover:text-white" href="/artists">Artists</a>
+            </li>
+            <li class="flex">
+              <a class="w-full px-4 py-2 rounded hover:cursor-pointer hover:bg-gray-900 hover:text-white" href="/genres">The Loai</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="w-full px-5 py-12 flex">
+        <%= yield %>
+      </main>
+    </section>
+    <footer class="border border-gray-100 w-full">
+      <p>footer</p>
+    </footer>
   </body>
 </html>

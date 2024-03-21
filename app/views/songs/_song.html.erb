@@ -1,0 +1,11 @@
+<div id="<%= dom_id song %>" class="flex flex-row items-center justify-between">
+  <div>
+    <h3><%= song.name %></h3>
+  </div>
+  <div>
+    <% if action_name != "show" %>
+      <%= link_to "Edit this song", edit_song_path(song), class: "rounded-lg py-1 ml-2 px-3 bg-gray-300 inline-block font-medium" %>
+      <hr class="mt-6">
+    <% end %>
+  </div>
+</div>
