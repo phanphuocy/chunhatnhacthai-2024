@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_22_033954) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_22_071113) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "slug"
@@ -38,6 +38,24 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_22_033954) do
   create_table "genres", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "lyric_lines", force: :cascade do |t|
+    t.string "thai"
+    t.string "roman"
+    t.string "eng"
+    t.integer "lyric_part_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lyric_part_id"], name: "index_lyric_lines_on_lyric_part_id"
+  end
+
+  create_table "lyric_parts", force: :cascade do |t|
+    t.string "name"
+    t.integer "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_lyric_parts_on_song_id"
   end
 
   create_table "songs", force: :cascade do |t|
