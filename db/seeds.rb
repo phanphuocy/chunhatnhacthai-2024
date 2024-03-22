@@ -1,6 +1,7 @@
 LyricPart.destroy_all
 LyricLine.destroy_all
 YtVideo.destroy_all
+Album.destroy_all
 
 #--------#
 # Artist #
@@ -510,22 +511,6 @@ Song.create!([
         distributed_as: "EP"
     },
     {
-        name: "Everything",
-        artists: [ @urboytj ],
-        year: 2021,
-        distributed_as: "EP",
-        yt_videos: [
-            YtVideo.new({
-                video_id: "sPBjONugxj4",
-                version: "OFFICIAL MV"
-            }),
-            YtVideo.new({
-                video_id: "NoGDJht9iEo",
-                version: "T-POP STAGE"
-            })
-        ]
-    },
-    {
         name: "Life Is A Game",
         artists: [ @urboytj ],
         year: 2022,
@@ -581,7 +566,211 @@ Song.create!([
     }
 ])
 
+@urman = Album.create!({
+    name: "URMAN",
+    artist: @urboytj,
+    year: 2023,
+    cover_image_url: "album/urman.jpeg",
+    songs: [
+        Song.new({
+            name: "คนขี้เหงา [URMAN]",
+            artists: [ @urboytj ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "J38TmpW2lBc",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+                YtVideo.new({
+                    video_id: "osHhsPe50C4",
+                    version: "Sanvil_Livnas's VIETSUB"
+                })
+            ]
+        }),
+        Song.new({
+            name: "คิดไม่ถึง [EMPTY]",
+            artists: [ @urboytj, @maiyarap ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "2hUCCu2CqBA",
+                    version: "OFFICIAL VISUALIZER"
+                })
+            ]
+        }),
+        Song.new({
+            name: "หาไม่ได้ [ONLY ONE]",
+            artists: [ @urboytj ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "_42q90Ftvj4",
+                    version: "OFFICIAL VISUALIZER"
+                })
+            ]
+        }),
+        Song.new({
+            name: "ประโยคบอกเล่า [NONSENSE]",
+            artists: [ @urboytj ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "pxXsIG4mOHE",
+                    version: "OFFICIAL VISUALIZER"
+                })
+            ]
+        }),
+        Song.new({
+            name: "คู่กัน [TOGETHER]",
+            artists: [ @urboytj ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "Z81Gpf1rPcs",
+                    version: "OFFICIAL VISUALIZER"
+                })
+            ]
+        }),
+        Song.new({
+            name: "พ่อแม่ไม่สั่งสอน [SHH!]",
+            artists: [ @urboytj ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "KBSDiSBfqTw",
+                    version: "OFFICIAL VISUALIZER"
+                })
+            ]
+        }),
+        Song.new({
+            name: "การันตี [GUARANTEE]",
+            artists: [ @urboytj ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "o0ERKlEXAio",
+                    version: "OFFICIAL VISUALIZER"
+                })
+            ]
+        }),
+        Song.new({
+            name: "ล้มทับ [FALLOUT]",
+            artists: [ @urboytj ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "xSgxDps75wA",
+                    version: "OFFICIAL VISUALIZER"
+                })
+            ]
+        }),
+        Song.new({
+            name: "ไม่ติด [DOUBLE]",
+            artists: [ @urboytj, @gavind ],
+            year: 2023,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "NytJWLrHLuc",
+                    version: "OFFICIAL VISUALIZER"
+                })
+            ]
+        }),
+    ]
+})
 
+@happyneverafter = Album.create!({
+    name: "Happy Never After",
+    artist: @urboytj,
+    year: 2022,
+    cover_image_url: "album/happyneverafter.jpg",
+    songs: [
+        Song.new({
+            name: "เป็นได้ทุกอย่าง [EVERYTHING]",
+            artists: [ @urboytj ],
+            year: 2021,
+            distributed_as: "EP",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "sPBjONugxj4",
+                    version: "OFFICIAL MV"
+                }),
+                YtVideo.new({
+                    video_id: "NoGDJht9iEo",
+                    version: "T-POP STAGE"
+                })
+            ]
+        }),
+        Song.new({
+            name: "ขอเวลานอก [SUB]",
+            artists: [ @urboytj ],
+            year: 2022,
+            distributed_as: "EP",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "VIZFt6WCUQE",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "สุดปลายทาง [Out of Time]",
+            artists: [ @urboytj ],
+            year: 2022,
+            distributed_as: "EP",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "jvLxL23GDnE",
+                    version: "OFFICIAL MV"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "เจ็บตลอดไป [FOREVER HEARTBREAK]",
+            artists: [ @urboytj ],
+            year: 2022,
+            distributed_as: "EP",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "SRz-L8YkA3w",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "เรื่องแค่นี้ [UNLESS]",
+            artists: [ @urboytj ],
+            year: 2022,
+            distributed_as: "EP",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "0XQofKpqBnE",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }), 
+        Song.new({
+            name: "อะไรเอ่ย [???]",
+            artists: [ @urboytj ],
+            year: 2022,
+            distributed_as: "EP",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "3cG4ltc3aPk",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }), 
+    ]
+})
 
 @samepage = Song.create!({
     name: "คิด(แต่ไม่)ถึง [Same Page?]",

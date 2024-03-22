@@ -1,0 +1,74 @@
+<div class="mx-auto md:w-2/3 w-full flex flex-col">
+  <section class="flex flex-row gap-12">
+    <%= image_tag @album.cover_image_url, class: "w-56 h-56"%>
+    <div class="w-3/4 pt-4">
+      <p>Album by <%= link_to @album.artist.name, @album.artist, class: "underline" %></p>
+      <h1 class="text-4xl font-bold py-1"><%= @album.name %></h1>
+      <p class="text-gray-700 py-1"><%= @album.year %></p>
+      <div class="h-3"></div>
+    </div>
+  </section>
+  <div class="h-12"></div>
+  <section class="">
+    <header class="py-2">
+      <h2 class="text-2xl font-bold">Tracks</h2>
+    </header>
+    <main class="flex flex-row gap-16">
+      <div class="w-1/2">
+        <% @album.songs.slice(0, (@album.songs.length()/2).to_f.round + 1).each do |song| %>
+          <% if song.yt_videos.present? %>
+            <%= link_to(song_yt_video_path(song, song.yt_videos[0]) , class: "hover:bg-gray-200 hover:border hover:border-gray-300 hover:border-solid") do %>
+              <div class="py-2 border-b border-gray-200 border-solid flex flex-row">
+                <div class="w-2/3 flex flex-col justify-start">
+                  <h3 class="font-semibold hover:underline"><%= song.name %></h3>
+                  <p class="text-sm text-gray-400">This is translated text</p>
+                </div>
+                <div class="w-1/3 flex flex-row justify-end items-center">
+                  <p class="text-gray-700"><%= song.year %></p>
+                </div>
+              </div>
+            <% end %>
+          <% else %>
+            <div class="py-2 border-b border-gray-200 border-solid flex flex-row">
+              <div class="w-2/3 flex flex-col justify-start">
+                <h3 class="font-semibold text-gray-500"><%= song.name %></h3>
+                <p class="text-sm text-gray-400">This is translated text</p>
+              </div>
+              <div class="w-1/3 flex flex-row justify-end items-center">
+                <p class="text-gray-700"><%= song.year %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="w-1/2">
+        <% (@album.songs.present? ? @album.songs.slice((@album.songs.length()/2).round + 1, @album.songs.length) : []).each do |song| %>
+          <% if song.yt_videos.present? %>
+            <%= link_to(song_yt_video_path(song, song.yt_videos[0]) , class: "hover:bg-gray-200 hover:border hover:border-gray-300 hover:border-solid") do %>
+              <div class="py-2 border-b border-gray-200 border-solid flex flex-row">
+                <div class="w-2/3 flex flex-col justify-start">
+                  <h3 class="font-semibold hover:underline"><%= song.name %></h3>
+                  <p class="text-sm text-gray-400">This is translated text</p>
+                </div>
+                <div class="w-1/3 flex flex-row justify-end items-center">
+                  <p class="text-gray-700"><%= song.year %></p>
+                </div>
+              </div>
+            <% end %>
+          <% else %>
+            <div class="py-2 border-b border-gray-200 border-solid flex flex-row">
+              <div class="w-2/3 flex flex-col justify-start">
+                <h3 class="font-semibold text-gray-500"><%= song.name %></h3>
+                <p class="text-sm text-gray-400">This is translated text</p>
+              </div>
+              <div class="w-1/3 flex flex-row justify-end items-center">
+                <p class="text-gray-700"><%= song.year %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </main>
+  </section>
+  <div class="h-12"></div>
+</div>

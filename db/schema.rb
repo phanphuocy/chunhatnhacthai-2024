@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_22_071113) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_22_112023) do
+  create_table "albums", force: :cascade do |t|
+    t.string "name"
+    t.integer "year"
+    t.integer "artist_id", null: false
+    t.string "cover_image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "slug"
@@ -64,6 +73,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_22_071113) do
     t.string "distributed_as", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "album_id"
   end
 
   create_table "yt_videos", force: :cascade do |t|

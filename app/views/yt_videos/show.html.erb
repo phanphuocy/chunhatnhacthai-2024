@@ -9,9 +9,12 @@
         <section class="py-3">
           <div class="flex flex-row gap-4">
             <div>
-              <div class="w-32 h-32">
-                <img src="https://t2.genius.com/unsafe/340x340/https%3A%2F%2Fimages.genius.com%2F717fdb880cc8f016a696e96b1211bf5b.1000x1000x1.png" width="256" height="256">
-              </div>
+              <% if @song.album.present? %>
+                <div class="w-48 h-48">
+                  <%= image_tag @song.album.cover_image_url %>
+                  <p class="underline"><%= link_to "Album #{@song.album.name}", @song.album %></p>
+                </div>
+              <% end %>
             </div>
             <div class="p-4">
               <h1 class="font-bold text-xl"><%= @song.name %></h1>
@@ -46,6 +49,21 @@
             <% end %>
           </main>
         </section>
+        <div class="h-8"></div>
+        <% if @song.album.present? %>
+          <section>
+            <header>
+              <h2 class="font-bold text-lg">Tracks album <%= @song.album.name %></h2>
+            </header>
+            <main class="py-2 grid grid-cols-4 gap-3 item-stretch">
+              <% @song.album.songs.each do |track| %>
+                <%= link_to song_yt_video_path(track, track.yt_videos[0]) do %>
+                  <%= track.name %>
+                <% end %>
+              <% end %>
+            </main>
+          </section>
+        <% end %>
       </div>
     </div>
     <div class="w-2/5 p-4 border border-gray-200 border-solid">
