@@ -1,0 +1,19 @@
+<div id="<%= dom_id yt_video %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Video:</strong>
+    <%= yt_video.video_id %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Version:</strong>
+    <%= yt_video.version %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Song:</strong>
+    <%= yt_video.song_id %>
+  </p>
+  <% if action_name != "show" %>
+    <%# <%= link_to "Show this yt video", yt_video, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%# <%= link_to "Edit this yt video", edit_yt_video_path(yt_video), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %> %> %>
+    <hr class="mt-6">
+  <% end %>
+</div>

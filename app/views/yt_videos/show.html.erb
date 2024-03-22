@@ -1,0 +1,288 @@
+<% @song = @yt_video.song %>
+<div>
+  <div class="flex flex-row gap-4">
+    <div class="w-3/5 border border-gray-200 border-solid">
+      <section class="bg-gray-900 p-4 rounded-lg">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/<%= @yt_video.video_id %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </section>
+      <div class="p-4">
+        <section class="py-3">
+          <div class="flex flex-row gap-4">
+            <div>
+              <div class="w-32 h-32">
+                <img src="https://t2.genius.com/unsafe/340x340/https%3A%2F%2Fimages.genius.com%2F717fdb880cc8f016a696e96b1211bf5b.1000x1000x1.png" width="256" height="256">
+              </div>
+            </div>
+            <div class="p-4">
+              <h1 class="font-bold text-xl"><%= @song.name %></h1>
+              <% @song.artists.each do |artist| %>
+                <%= link_to artist do %>
+                  <h3 class="underline"><%= artist.name %></h3>
+                <% end%>
+              <% end%>
+              <article class="py-4 text-sm text-gray-700">
+                <p>"Same Page?" là đĩa đơn kỹ thuật số thứ bảy của Tilly Birds, được phát hành vào ngày 26/2/2020.</p>
+                <p>Vào ngày 3/3/2020, lyrics video bài hát "Same Page?" đã vượt qua cột mốc đầu tiên là 1 triệu lượt xem, sáu ngày sau khi phát hành. Video âm nhạc sau đó đã đạt được 1 triệu lượt xem trong vòng 4 ngày sau khi phát hành vào ngày 20/3. Vào ngày 3/8, MV chính thức đạt 50 triệu lượt xem trên YouTube.</p>
+                <p>Bài hát đã đứng đầu danh sách phát Top 50 Thái Lan của Spotify vào ngày 22/3.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <div class="h-12"></div>
+        <section>
+          <header>
+            <h2 class="font-bold text-lg">Versions of this song</h2>
+          </header>
+          <main class="py-2 grid grid-cols-4 gap-3 item-stretch">
+            <% @song.yt_videos.each do |yt_video| %>
+              <%= link_to song_yt_video_path(@song, yt_video) do %>
+                <div class="h-full flex flex-col gap-1 hover:bg-gray-200 border-b border-gray-200 border-solid p-2 rounded-xl">
+                  <img src="<%= VideoThumb.get("https://www.youtube.com/watch?v=#{yt_video.video_id}") %>" width="100%" height="200px" class="rounded-lg" />
+                  <div class="py-2">
+                    <p><span class="block px-2 py-1 text-sm"><%= @yt_video.video_id == yt_video.video_id ? "Đang phát..:" : "  " %> <%= yt_video.version %></span></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </main>
+        </section>
+      </div>
+    </div>
+    <div class="w-2/5 p-4 border border-gray-200 border-solid">
+      <section class="py-3">
+        <h1 class="font-bold text-xl"><%= @song.name %></h1>
+        <p class="text-gray-600">Nghĩ (nhưng không) nghĩ về</p>
+      </section>
+      <section>
+        <%# <p>[Verse 1]</p>
+        <p class="text-xl font-thin text-gray-700">คิดอยู่ทุกวัน คิดอยู่ทุกคืน</p>
+        <p class="text-sm text-gray-800">Kít yòo túk wan · kít yòo túk keun</p>
+        <p class="text-xl font-thin text-gray-700">คิดว่าสักวัน ตัวฉันคงถูกลืม</p>
+        <p class="text-sm text-gray-800">Kít wâa sàk wan · dtuua chăn kong tòok leum</p>
+        <p class="text-xl font-thin text-gray-700">น้อยลงทุกวัน ที่เราคุยกัน</p>
+        <p class="text-sm text-gray-800">Nói long túk wan têe rao kui gan</p>
+        <p class="text-xl font-thin text-gray-700">เพราะว่าอะไร เธอถึงได้เปลี่ยนไป</p>
+        <p class="text-sm text-gray-800">Prór wâa à-rai · ter tĕung dâai bplìian bpai</p>
+        <br/>
+        <p>[Pre-Chorus]</p>
+        <p class="text-xl font-thin text-gray-700">คิด (แต่ไม่) ถึง</p>
+        <p class="text-sm text-gray-800">Kít (dtàe mâi) tĕung</p>
+        <p class="text-xl font-thin text-gray-700">คิด คิด (แต่ไม่) ถึงเธอ</p>
+        <p class="text-sm text-gray-800">Kít kít (dtàe mâi) tĕung ter</p>
+        <p class="text-xl font-thin text-gray-700">คิด (แต่ไม่) ถึง</p>
+        <p class="text-sm text-gray-800">Kít (dtàe mâi) tĕung</p>
+        <p class="text-xl font-thin text-gray-700">คิด คิด (แต่ไม่) ถึงเธอ</p>
+        <p class="text-sm text-gray-800">Kít kít (dtàe mâi) tĕung ter</p>
+        <p class="text-xl font-thin text-gray-700">เธอรู้บ้างไหม</p>
+        <p class="text-sm text-gray-800">Ter róo bâang măi</p>
+        <p class="text-xl font-thin text-gray-700">ว่ามีใครทนทุกข์ทรมาน</p>
+        <p class="text-sm text-gray-800">Wâa mee krai ton túk tor-rá-maan Yàak róo piiang</p>
+        <br/>
+        <p>[Verse 1]</p>
+        <p class="text-xl font-thin text-gray-700">คิดอยู่ทุกวัน คิดอยู่ทุกคืน</p>
+        <p class="text-sm text-gray-800">Kít yòo túk wan · kít yòo túk keun</p>
+        <p class="text-xl font-thin text-gray-700">คิดว่าสักวัน ตัวฉันคงถูกลืม</p>
+        <p class="text-sm text-gray-800">Kít wâa sàk wan · dtuua chăn kong tòok leum</p>
+        <p class="text-xl font-thin text-gray-700">น้อยลงทุกวัน ที่เราคุยกัน</p>
+        <p class="text-sm text-gray-800">Nói long túk wan têe rao kui gan</p>
+        <p class="text-xl font-thin text-gray-700">เพราะว่าอะไร เธอถึงได้เปลี่ยนไป</p>
+        <p class="text-sm text-gray-800">Prór wâa à-rai · ter tĕung dâai bplìian bpai</p>
+        <br/>
+        <p>[Verse 1]</p>
+        <p class="text-xl font-thin text-gray-700">คิดอยู่ทุกวัน คิดอยู่ทุกคืน</p>
+        <p class="text-sm text-gray-800">Kít yòo túk wan · kít yòo túk keun</p>
+        <p class="text-xl font-thin text-gray-700">คิดว่าสักวัน ตัวฉันคงถูกลืม</p>
+        <p class="text-sm text-gray-800">Kít wâa sàk wan · dtuua chăn kong tòok leum</p>
+        <p class="text-xl font-thin text-gray-700">น้อยลงทุกวัน ที่เราคุยกัน</p>
+        <p class="text-sm text-gray-800">Nói long túk wan têe rao kui gan</p>
+        <p class="text-xl font-thin text-gray-700">เพราะว่าอะไร เธอถึงได้เปลี่ยนไป</p>
+        <p class="text-sm text-gray-800">Prór wâa à-rai · ter tĕung dâai bplìian bpai</p>
+        <br/>
+        อยากรู้เพียง
+        ว่าความคิดถึงของเธอกับฉัน
+        มันเท่ากันหรือเปล่า
+        ถามจริง ๆ ว่าใจเธอเปลี่ยนไปหรือเปล่า
+        ฉันไม่คิดไปเองใช่ไหม
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปไม่เคยถึงเธอเลย
+        ยังนึกถึงวันนั้น วันที่เราหัวเราะกัน
+        ไม่เคยลืมรอยยิ้มเธอสักครั้ง
+        จำได้ไหม วันที่เราทะเลาะกัน
+        เธอยังอภัยให้ฉันอยู่ทุกครั้ง
+        ทุกความทรงจำยังทำให้ฉัน
+        คิด (แต่ไม่) ถึง
+        คิด คิด (แต่ไม่) ถึงเธอ
+        คิด (แต่ไม่) ถึง
+        คิด คิด (แต่ไม่) ถึงเธอ
+        เธอรู้บ้างไหม
+        ว่ามีใครทนทุกข์ทรมาน
+        อยากรู้เพียง
+        ว่าความคิดถึงของเธอกับฉัน
+        มันเท่ากันหรือเปล่า
+        ถามจริง ๆ ว่าใจเธอเปลี่ยนไป หรือเปล่า
+        ฉันไม่คิดไปเองใช่ไหม
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปได้เพียงในความทรงจำ
+        ที่มีเราเรื่อยมา
+        แค่นึกภาพตอนนั้น ฉันก็มีน้ำตา
+        รู้บ้างไหมว่าเจ็บแค่ไหน
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปไม่เคยถึงเธอเลย
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        ว่าความคิดถึงของเธอกับฉัน
+        มันเท่ากันหรือเปล่า
+        ถามจริงๆ ว่าใจเธอเปลี่ยนไป หรือเปล่า
+        ฉันไม่คิดไปเองใช่ไหม
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปได้เพียงในความทรงจำ
+        ที่มีเราเรื่อยมา
+        แค่นึกภาพตอนนั้น ฉันก็มีน้ำตา
+        รู้บ้างไหมว่าเจ็บแค่ไหน
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปไม่เคยถึงเธอเลย
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        ส่งไปไม่เคยถึงเธอเลย
+        ถ้าเธอนั้นจะไม่กลับมา
+        อยากให้รู้ว่าทุกๆ ช่วงเวลา
+        ไม่เคยไม่คิดถึงเธอเลย %>
+        ถ้าเธอไม่ได้รักกับเขา เราจะได้รักกันไหม<br/>
+        Tah tur mai dai ruk gup kao rao ja dai ruk gun mai<br/>
+        If you weren’t in love with him, would you love me?<br/>
+        เป็นคำถามที่ยังข้องใจ<br/>
+        Bpen kum tahm tee yung kaung jai<br/>
+        It’s the question that I still wonder about<br/>
+        เธอไม่รักเพราะมีเขา หรือว่าฉันไม่ใช่<br/>
+        Tur mai ruk pror mee kao reu wah chun mai chai<br/>
+        Do you not love me because of him, or is it just me?<br/>
+        เรื่องเดียวที่อยากรู้<br/>
+        Reuang diao tee yahk roo<br/>
+        That’s the one thing I want to know<br/>
+        <br/>
+        (*) แต่มันก็คงจะสายถ้าจะให้ฉันพูดออกไป<br/>
+        Dtae mun gor kong ja sai tah ja hai chun poot auk bpai<br/>
+        But it’s probably too late, if you want me to say it out loud<br/>
+        ก็เธอหนะมีเขาฉันก็ควรที่จะเข้าใจ<br/>
+        Gor tur na mee kao chun gor kuan tee ja kao jai<br/>
+        You have him, I should understand<br/>
+        ก็แบบว่ามันยังคิดอยู่ อยากให้เธอลองคิดดู<br/>
+        Gor baep wah mun yung kit yoo yahk hai tur laung kit doo<br/>
+        But like, I’m still thinking about it, I want you to try thinking about it too<br/>
+        ก็เผื่อว่าวันพรุ่งนี้เธอจะเปลี่ยนใจ<br/>
+        Gor peua wah wun proong nee tur ja bplian jai<br/>
+        In case tomorrow you’ll change your mind<br/>
+        ตอนนี้คงทำได้เพียงแค่รอและมันก็คงต้องยอมก่อน<br/>
+        Dtaun nee kong tum dai piang kae ror ale mun gor kong dtaung yaum gaun<br/>
+        Right now all I can do is wait, and I’ll probably have to give up<br/>
+        ก็แล้วจะให้ฉันทำยังไง<br/>
+        Gor laeo ja hai chun tum yung ngai<br/>
+        But what do you want me to do?<br/>
+        ก็แบบว่าถ้าเธอเหงาขึ้นมาเวลาที่ไม่มีใคร<br/>
+        Gor baep wah tah tur ngao keun mah welah tee mai mee krai<br/>
+        But like, if you ever get lonely when you don’t have anyone else<br/>
+        ให้ฉันไปหาเธอได้ไหม<br/>
+        Hai chun bpai hah tur dai mai<br/>
+        Would you let me come see you?<br/>
+        <br/>
+        ถ้าเกิดว่ามีความลับที่ฉันยังไม่อยากจะบอก<br/>
+        Tah gert wah mee kwahm lup tee chun yung mai yahk ja bauk<br/>
+        If I happened to have a secret that I didn’t want to tell yet<br/>
+        ถ้าเกิดว่ามีคำถามที่ไม่อยากได้ยินคำตอบ<br/>
+        Tah gert wah mee kum tahm tee mai yahk dai yin kum dtaup<br/>
+        If I happened to have a question that I didn’t want to hear the answer to<br/>
+        ถ้าเกิดว่าไม่มีเค้า เธอจะมองฉันดูกระจอกไหม<br/>
+        Tah gert wah mai mee kao tur ja maung chun doo grajauk nai<br/>
+        If you didn’t happen to have him, would you see me as insignificant?<br/>
+        ก็แบบว่าเอาจริงๆ ไม่อยากจะได้ยินคำปลอบใจ<br/>
+        Gor baep wah ao jing jing mai yahk ja dai yin kum bplaup jai<br/>
+        But like, seriously, I don’t want to hear any comforting words<br/>
+        ละถามว่ารักเธอไหม ฉันก็คงจะตอบว่ามากแหละ<br/>
+        La tahm wah ruk tur mai chun gor kong ja dtaup wah mahk lae<br/>
+        If you ask if I love you, my answer would be a lot<br/>
+        แต่ถามว่าเกลียดเธอไหม บางทีมันก็ตอบยากแหละ<br/>
+        Dtae tahm wah gliet tur mai bahng tee mun gor dtaup yahk lae<br/>
+        But if you ask if I hate you, sometimes the answer would be difficult<br/>
+        ก็แบบว่ามันไม่ทราบเลยที่จริงเธอคิดอะไรอยู่<br/>
+        Gor baep wah mun mai sahp loey tee jing tur kit arai yoo<br/>
+        Like, I don’t know what you’re really thinking<br/>
+        บางทีก็ให้ความหวัง ชอบมาเล่นอะไรก็ไม่รู้<br/>
+        Bahng tee gor hai kwahm wung chaup mah len arai gor mai roo<br/>
+        Sometimes you give me hope, I don’t know if you just like playing around<br/>
+        <br/>
+        (**) ถ้าเธอไม่ได้รักกับเขา เราจะได้รักกันไหม<br/>
+        Tah tur mai dai ruk gup kao rao ja dai ruk gun mai<br/>
+        If you weren’t in love with him, would you love me?<br/>
+        เป็นคำถามที่ยังข้องใจ<br/>
+        Bpen kum tahm tee yung kaung jai<br/>
+        It’s the question that I still wonder about<br/>
+        เธอไม่รักเพราะมีเขา หรือว่าฉันไม่ใช่<br/>
+        Tur mai ruk pror mee kao reu wah chun mai chai<br/>
+        Do you not love me because of him, or is it just me?<br/>
+        เรื่องเดียวที่อยากรู้<br/>
+        Reuang diao tee yahk roo<br/>
+        That’s the one thing I want to know<br/>
+        ถ้าเธอไม่ได้รักกับเขา เธอจะมองฉันบ้างไหม<br/>
+        Tah tur mai dai ruk gup kao tur ja maung chun bahng mai<br/>
+        If you didn’t love him, would you look at me?<br/>
+        ถ้าหากเราไม่เจอช้าไป<br/>
+        Tah hahk rao mai jur chah bpai<br/>
+        If we didn’t meet too late<br/>
+        ถ้าหากไม่ใช่เขา จะเป็นฉันได้ไหม<br/>
+        Tah hahk mai chai kao ja bpen chun dai mai<br/>
+        If it wasn’t him, would it have been me?<br/>
+        หรือความจริงไม่ว่ายังไง<br/>
+        Reu kwahm jing mai wah yung ngai<br/>
+        Or is it the truth that, no matter what<br/>
+        เธอก็ไม่รักฉันอยู่ดี<br/>
+        Tur gor mai ruk chun yoo dee<br/>
+        You wouldn’t love me?<br/>
+        <br/>
+        ที่ทักไปหาทุกวัน จะให้ฉันทำยังไงได้หละ<br/>
+        Tee tuk bpai mah took wun ja hai chun tum yung ngai dai la<br/>
+        When you greet me every day, what do you want me to do?<br/>
+        ถ้าเกิดว่าไม่มีเขาอะไรอะไรมันคงจะง่ายนะ<br/>
+        Tah gert wah mai mee kao arai arai mun kong ja ngai na<br/>
+        If you didn’t have him, everything would be easy<br/>
+        ก็แบบว่า ตอบได้มะ ว่าเป็นที่ฉันหรือเขา<br/>
+        Gor baep wah dtaup dai ma wah bpen tee chun reu kao<br/>
+        Like, could you answer me? Is it me or him?<br/>
+        ตอนนี้มันค้างคา ก็แบบว่าฉันไม่อยากจะเดาเลย<br/>
+        Dtaun nee mun kahng kah gor baep wah chun mai yahk ja dao loey<br/>
+        Right now I’m left hanging, like, I don’t want to guess<br/>
+        บางทีเธออยู่กับเค้าก็คิดว่าทำไมไม่ใช่เราวะ<br/>
+        Bahng tee tur yoo gup kao gor kit wah tummai mai chai rao wa<br/>
+        Sometimes when you’re with him, I wonder why it’s not us<br/>
+        ที่จริงก็รู้คำตอบ แต่ความจริงแล้วมันก็เศร้านะ<br/>
+        Tee jing gor roo kum dtaup dtae kwahm jing laeo mun gor sao na<br/>
+        I actually know the answer, but the truth is sad<br/>
+        ช่างแม่งไม่อยากจะเล่าละ โซดาผสมกับเหล้านะ<br/>
+        Chahng maeng mai yahk ja lao la sodah pasom gup lao na<br/>
+        I really f*ck*ng don’t want to say it, soda mixed with alcohol<br/>
+        ถ้าเกิดคืนนี้ฉันเมา โทรไปหาเธอไม่ต้องเดานะ<br/>
+        Tah gert keun nee chun mao tah bpai hah tur mai dtaung dao na<br/>
+        If tonight I got drunk and called you, there’s no question about it<br/>
+        เธอคงจะอยู่กับเค้าอะ<br/>
+        Tur kong ja yoo gup kao a<br/>
+        You’d be with him
+      </section>
+    </div>
+  </div>
+</div>
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+    <%= render @song %>
+    <%= link_to "Edit this song", edit_song_path(@song), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to "Destroy this song", song_path(@song), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+    <%= link_to "Back to songs", songs_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+</div>

@@ -510,3 +510,75 @@ Song.create!([
         distributed_as: "EP"
     }
 ])
+
+@samepage = Song.create!({
+    name: "คิด(แต่ไม่)ถึง [Same Page?]",
+    artists: [ @tillybirds ],
+    year: 2017,
+    distributed_as: "EP"
+})
+
+@samepage.yt_videos = [
+    YtVideo.new({
+        version: "OFFCIAL MV",
+        video_id: "dJ9uVVNWClk"
+    }),
+    YtVideo.new({
+        version: "LYRIC VIDEO",
+        video_id: "V1_LViinG0U"
+    }),
+    YtVideo.new({
+        version: "COVER",
+        video_id: "4QOb3crywJU"
+    })
+]
+
+@question = Song.create!({
+    name: "ถามคำ [QUESTION?]",
+    artists: [ @urboytj ],
+    year: 2021,
+    distributed_as: "Single",
+    yt_videos: [
+        YtVideo.new({
+            version: "OFFICIAL VISUALIZER",
+            video_id: "E0IfcXBxyic"
+        }),
+        YtVideo.new({
+            version: "T-POP STAGE",
+            video_id: "idOr2H0IqxA"
+        }),
+        YtVideo.new({
+            version: "Official Live Performance",
+            video_id: "OdnFzhz0A64"
+        }),
+        YtVideo.new({
+            version: "REMIX",
+            video_id: "yLYKTLeFnug"
+        }),
+        YtVideo.new({
+            version: "Songtopia Livehouse",
+            video_id: "wQUeCcxNhWo"
+        }),
+        YtVideo.new({
+            version: "COVER",
+            video_id: "DrW7n1pjXFY"
+        })
+    ]
+})
+
+@rukdaibpao = Song.create!({
+    name: "รักได้ป่าว",
+    artists: [ @gavind ],
+    year: 2019,
+    distributed_as: "Single",
+    yt_videos: [
+        YtVideo.new({
+            version: "OFFICIAL MV",
+            video_id: "swlbw8N1Bwk"
+        }),
+        YtVideo.new({
+            version: "Acoustic Cover",
+            video_id: "0ohXRvjYJ40"
+        })
+    ]
+})

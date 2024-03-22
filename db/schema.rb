@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_21_024405) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_22_033954) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "slug"
@@ -46,6 +46,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_024405) do
     t.string "distributed_as", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "yt_videos", force: :cascade do |t|
+    t.string "video_id"
+    t.string "version"
+    t.integer "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_yt_videos_on_song_id"
   end
 
 end
