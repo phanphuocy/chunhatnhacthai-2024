@@ -1,11 +1,143 @@
+<div>
+  <div class="flex flex-row gap-4">
+    <div class="w-3/5 p-4 border border-gray-200 border-solid">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/9VIQkNs8U8g?si=X0L6hgf9XekQ2HsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <section class="py-3">
+        <div class="flex flex-row gap-4">
+          <div>
+            <div class="w-32 h-32">
+              <img src="https://t2.genius.com/unsafe/340x340/https%3A%2F%2Fimages.genius.com%2F717fdb880cc8f016a696e96b1211bf5b.1000x1000x1.png" width="256" height="256">
+            </div>
+          </div>
+          <div class="p-4">
+            <h1 class="font-bold text-xl"><%= @song.name %></h1>
+            <% @song.artists.each do |artist| %>
+              <%= link_to artist do %>
+                <h3 class="underline"><%= artist.name %></h3>
+              <% end%>
+            <% end%>
+            <article class="py-4 text-sm text-gray-700">
+              <p>"Same Page?" là đĩa đơn kỹ thuật số thứ bảy của Tilly Birds, được phát hành vào ngày 26/2/2020.</p>
+              <p>Vào ngày 3/3/2020, lyrics video bài hát "Same Page?" đã vượt qua cột mốc đầu tiên là 1 triệu lượt xem, sáu ngày sau khi phát hành. Video âm nhạc sau đó đã đạt được 1 triệu lượt xem trong vòng 4 ngày sau khi phát hành vào ngày 20/3. Vào ngày 3/8, MV chính thức đạt 50 triệu lượt xem trên YouTube.</p>
+              <p>Bài hát đã đứng đầu danh sách phát Top 50 Thái Lan của Spotify vào ngày 22/3.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="w-2/5 p-4 border border-gray-200 border-solid">
+      <section class="py-3">
+        <h1 class="font-bold text-xl"><%= @song.name %></h1>
+        <p class="text-gray-600">Nghĩ (nhưng không) nghĩ về</p>
+      </section>
+      <section>
+        <p>[Verse 1]</p>
+        <p class="text-xl font-thin text-gray-700">คิดอยู่ทุกวัน คิดอยู่ทุกคืน</p>
+        <p class="text-sm text-gray-800">Kít yòo túk wan · kít yòo túk keun</p>
+        <p class="text-xl font-thin text-gray-700">คิดว่าสักวัน ตัวฉันคงถูกลืม</p>
+        <p class="text-sm text-gray-800">Kít wâa sàk wan · dtuua chăn kong tòok leum</p>
+        <p class="text-xl font-thin text-gray-700">น้อยลงทุกวัน ที่เราคุยกัน</p>
+        <p class="text-sm text-gray-800">Nói long túk wan têe rao kui gan</p>
+        <p class="text-xl font-thin text-gray-700">เพราะว่าอะไร เธอถึงได้เปลี่ยนไป</p>
+        <p class="text-sm text-gray-800">Prór wâa à-rai · ter tĕung dâai bplìian bpai</p>
+        <br/>
+        <p>[Pre-Chorus]</p>
+        <p class="text-xl font-thin text-gray-700">คิด (แต่ไม่) ถึง</p>
+        <p class="text-sm text-gray-800">Kít (dtàe mâi) tĕung</p>
+        <p class="text-xl font-thin text-gray-700">คิด คิด (แต่ไม่) ถึงเธอ</p>
+        <p class="text-sm text-gray-800">Kít kít (dtàe mâi) tĕung ter</p>
+        <p class="text-xl font-thin text-gray-700">คิด (แต่ไม่) ถึง</p>
+        <p class="text-sm text-gray-800">Kít (dtàe mâi) tĕung</p>
+        <p class="text-xl font-thin text-gray-700">คิด คิด (แต่ไม่) ถึงเธอ</p>
+        <p class="text-sm text-gray-800">Kít kít (dtàe mâi) tĕung ter</p>
+        <p class="text-xl font-thin text-gray-700">เธอรู้บ้างไหม</p>
+        <p class="text-sm text-gray-800">Ter róo bâang măi</p>
+        <p class="text-xl font-thin text-gray-700">ว่ามีใครทนทุกข์ทรมาน</p>
+        <p class="text-sm text-gray-800">Wâa mee krai ton túk tor-rá-maan Yàak róo piiang</p>
+        <br/>
+        <p>[Verse 1]</p>
+        <p class="text-xl font-thin text-gray-700">คิดอยู่ทุกวัน คิดอยู่ทุกคืน</p>
+        <p class="text-sm text-gray-800">Kít yòo túk wan · kít yòo túk keun</p>
+        <p class="text-xl font-thin text-gray-700">คิดว่าสักวัน ตัวฉันคงถูกลืม</p>
+        <p class="text-sm text-gray-800">Kít wâa sàk wan · dtuua chăn kong tòok leum</p>
+        <p class="text-xl font-thin text-gray-700">น้อยลงทุกวัน ที่เราคุยกัน</p>
+        <p class="text-sm text-gray-800">Nói long túk wan têe rao kui gan</p>
+        <p class="text-xl font-thin text-gray-700">เพราะว่าอะไร เธอถึงได้เปลี่ยนไป</p>
+        <p class="text-sm text-gray-800">Prór wâa à-rai · ter tĕung dâai bplìian bpai</p>
+        <br/>
+        <p>[Verse 1]</p>
+        <p class="text-xl font-thin text-gray-700">คิดอยู่ทุกวัน คิดอยู่ทุกคืน</p>
+        <p class="text-sm text-gray-800">Kít yòo túk wan · kít yòo túk keun</p>
+        <p class="text-xl font-thin text-gray-700">คิดว่าสักวัน ตัวฉันคงถูกลืม</p>
+        <p class="text-sm text-gray-800">Kít wâa sàk wan · dtuua chăn kong tòok leum</p>
+        <p class="text-xl font-thin text-gray-700">น้อยลงทุกวัน ที่เราคุยกัน</p>
+        <p class="text-sm text-gray-800">Nói long túk wan têe rao kui gan</p>
+        <p class="text-xl font-thin text-gray-700">เพราะว่าอะไร เธอถึงได้เปลี่ยนไป</p>
+        <p class="text-sm text-gray-800">Prór wâa à-rai · ter tĕung dâai bplìian bpai</p>
+        <br/>
+        อยากรู้เพียง
+        ว่าความคิดถึงของเธอกับฉัน
+        มันเท่ากันหรือเปล่า
+        ถามจริง ๆ ว่าใจเธอเปลี่ยนไปหรือเปล่า
+        ฉันไม่คิดไปเองใช่ไหม
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปไม่เคยถึงเธอเลย
+        ยังนึกถึงวันนั้น วันที่เราหัวเราะกัน
+        ไม่เคยลืมรอยยิ้มเธอสักครั้ง
+        จำได้ไหม วันที่เราทะเลาะกัน
+        เธอยังอภัยให้ฉันอยู่ทุกครั้ง
+        ทุกความทรงจำยังทำให้ฉัน
+        คิด (แต่ไม่) ถึง
+        คิด คิด (แต่ไม่) ถึงเธอ
+        คิด (แต่ไม่) ถึง
+        คิด คิด (แต่ไม่) ถึงเธอ
+        เธอรู้บ้างไหม
+        ว่ามีใครทนทุกข์ทรมาน
+        อยากรู้เพียง
+        ว่าความคิดถึงของเธอกับฉัน
+        มันเท่ากันหรือเปล่า
+        ถามจริง ๆ ว่าใจเธอเปลี่ยนไป หรือเปล่า
+        ฉันไม่คิดไปเองใช่ไหม
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปได้เพียงในความทรงจำ
+        ที่มีเราเรื่อยมา
+        แค่นึกภาพตอนนั้น ฉันก็มีน้ำตา
+        รู้บ้างไหมว่าเจ็บแค่ไหน
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปไม่เคยถึงเธอเลย
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        ว่าความคิดถึงของเธอกับฉัน
+        มันเท่ากันหรือเปล่า
+        ถามจริงๆ ว่าใจเธอเปลี่ยนไป หรือเปล่า
+        ฉันไม่คิดไปเองใช่ไหม
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปได้เพียงในความทรงจำ
+        ที่มีเราเรื่อยมา
+        แค่นึกภาพตอนนั้น ฉันก็มีน้ำตา
+        รู้บ้างไหมว่าเจ็บแค่ไหน
+        ความคิดถึงที่ฉันได้เคยส่งไป
+        ส่งไปไม่เคยถึงเธอเลย
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        (คิดแต่ไม่ถึง คิด คิด แต่ไม่ถึงเธอ)
+        ส่งไปไม่เคยถึงเธอเลย
+        ถ้าเธอนั้นจะไม่กลับมา
+        อยากให้รู้ว่าทุกๆ ช่วงเวลา
+        ไม่เคยไม่คิดถึงเธอเลย
+      </section>
+    </div>
+  </div>
+</div>
 <div class="mx-auto md:w-2/3 w-full flex">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
-
     <%= render @song %>
-
     <%= link_to "Edit this song", edit_song_path(@song), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
       <%= button_to "Destroy this song", song_path(@song), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>

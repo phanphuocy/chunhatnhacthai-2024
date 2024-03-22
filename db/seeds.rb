@@ -349,42 +349,164 @@ Song.destroy_all
 Song.create!([
     {
         name: "Rebound",
-        artists: [ @urboytj ]
+        artists: [ @urboytj ],
+        year: 2016,
+        distributed_as: "EP"
     },
     {
         name: "Loud",
-        artists: [ @urboytj ]
+        artists: [ @urboytj ],
+        year: 2016,
+        distributed_as: "EP"
     },
     {
         name: "Beautiful",
-        artists: [ @urboytj ]
+        artists: [ @urboytj ],
+        year: 2016,
+        distributed_as: "EP"
     },
     {
         name: "Villain",
-        artists: [ @urboytj ]
+        artists: [ @urboytj ],
+        year: 2016,
+        distributed_as: "EP"
     },
     {
         name: "DeeDeeDi",
-        artists: [ @urboytj ]
+        artists: [ @urboytj ],
+        year: 2016,
+        distributed_as: "EP"
     },
     {
         name: "Sorry",
-        artists: [ @urboytj ]
+        artists: [ @urboytj ],
+        year: 2016,
+        distributed_as: "EP"
     },
     {
         name: "No Lie",
-        artists: [ @urboytj ]
+        artists: [ @urboytj ],
+        year: 2017,
+        distributed_as: "EP"
     },
     {
         name: "Jeeb",
-        artists: [ @urboytj ]
+        artists: [ @urboytj ],
+        year: 2017,
+        distributed_as: "EP"
+    },
+    {
+        name: "Don't",
+        artists: [ @urboytj ],
+        year: 2017,
+        distributed_as: "EP"
+    },
+    {
+        name: "Do You Mind?",
+        artists: [ @urboytj ],
+        year: 2017,
+        distributed_as: "EP"
+    },
+    {
+        name: "ไม่ตอบ",
+        artists: [ @urboytj ],
+        year: 2018,
+        distributed_as: "EP"
+    },
+    {
+        name: "ไม่อยากนอนคนเดียว",
+        artists: [ @urboytj ],
+        year: 2018,
+        distributed_as: "EP"
+    },
+    {
+        name: "แบกไม่ไหว",
+        artists: [ @urboytj ],
+        year: 2018,
+        distributed_as: "EP"
+    },
+    {
+        name: "Fake Love",
+        artists: [ @urboytj ],
+        year: 2019,
+        distributed_as: "EP"
+    },
+    {
+        name: "Stubborn",
+        artists: [ @urboytj ],
+        year: 2019,
+        distributed_as: "EP"
+    },
+    {
+        name: "รักปลอม",
+        artists: [ @urboytj ],
+        year: 2019,
+        distributed_as: "EP"
+    },
+    {
+        name: "ออกมาดิ",
+        artists: [ @urboytj ],
+        year: 2019,
+        distributed_as: "EP"
+    },
+    {
+        name: "Ghost",
+        artists: [ @urboytj ],
+        year: 2020,
+        distributed_as: "EP"
+    },
+    {
+        name: "Flex",
+        artists: [ @urboytj ],
+        year: 2020,
+        distributed_as: "EP"
+    },
+    {
+        name: "Ur scent",
+        artists: [ @urboytj ],
+        year: 2020,
+        distributed_as: "EP"
+    },
+    {
+        name: "Together",
+        artists: [ @urboytj ],
+        year: 2021,
+        distributed_as: "EP"
+    },
+    {
+        name: "Everything",
+        artists: [ @urboytj ],
+        year: 2021,
+        distributed_as: "EP"
+    },
+    {
+        name: "Life Is A Game",
+        artists: [ @urboytj ],
+        year: 2022,
+        distributed_as: "EP"
+    },
+    {
+        name: "Let me be",
+        artists: [ @urboytj ],
+        year: 2022,
+        distributed_as: "EP"
+    },
+    {
+        name: "Ask who",
+        artists: [ @urboytj ],
+        year: 2023,
+        distributed_as: "EP"
     },
     {
         name: "คิด(แต่ไม่)ถึง [Same Page?]",
-        artists: [ @tillybirds ]
+        artists: [ @tillybirds ],
+        year: 2017,
+        distributed_as: "EP"
     },
     {
         name: "ธรรมดาแสนพิเศษ / Tummadah Saen Piset (Extraordinary)",
-        artists: [ @anatomyrabbit ]
+        artists: [ @anatomyrabbit ],
+        year: 2017,
+        distributed_as: "EP"
     }
 ])

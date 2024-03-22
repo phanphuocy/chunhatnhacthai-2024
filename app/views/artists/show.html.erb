@@ -1,15 +1,76 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<div class="mx-auto md:w-2/3 w-full">
+  <section class="flex flex-row gap-12">
+    <div class="w-1/4 flex flex-row justify-end">
+      <%= image_tag "avatar/#{@artist.slug}.png", class: "rounded-full w-48 h-48"%>
+    </div>
+    <div class="w-3/4 pt-4">
+      <h1 class="text-4xl font-bold py-1"><%= @artist.name %></h1>
+      <p class="text-gray-700"><%= @artist.introduction %></p>
+      <div class="h-3"></div>
+      <% if @artist.birthday %>
+        <p class="text-gray-500">Birthday: <%= @artist.birthday.to_time.strftime('%B %e, %Y') %></p>
+      <% end %>
+    </div>
+  </section>
+  <div class="h-12"></div>
+  <section class="">
+    <header class="py-2">
+      <h2 class="text-2xl font-bold">This is <%= @artist.name %></h2>
+    </header>
+  </section>
+  <div class="h-12"></div>
+  <section class="">
+    <header class="py-2">
+      <h2 class="text-2xl font-bold">Discography</h2>
+      <nav>
+        <ul>
+          <li>
+            EP <span class="text-gray-600 text-xs"><%= @artist.songs ?  @artist.songs.length() : 0 %></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex flex-row gap-16">
+      <div class="w-1/2">
+        <% @artist.songs.slice(0, (@artist.songs.length()/2).to_f.round + 1).each do |song| %>
+          <%= link_to(song , class: "hover:bg-gray-200 hover:border hover:border-gray-300 hover:border-solid") do %>
+            <div class="py-2 border-b border-gray-200 border-solid flex flex-row">
+              <div class="w-2/3 flex flex-col justify-start">
+                <h3 class="font-semibold hover:underline"><%= song.name %></h3>
+                <p class="text-sm text-gray-400">This is translated text</p>
+              </div>
+              <div class="w-1/3 flex flex-row justify-end items-center">
+                <p class="text-gray-700"><%= song.year %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="w-1/2">
+        <% @artist.songs.slice((@artist.songs.length()/2).round + 1, @artist.songs.length).each do |song| %>
+          <%= link_to(song , class: "hover:bg-gray-200 hover:border hover:border-gray-300 hover:border-solid") do %>
+            <div class="py-2 border-b border-gray-200 border-solid flex flex-row">
+              <div class="w-2/3 flex flex-col justify-start">
+                <h3 class="font-semibold hover:underline"><%= song.name %></h3>
+                <p class="text-sm text-gray-400">This is translated text</p>
+              </div>
+              <div class="w-1/3 flex flex-row justify-end items-center">
+                <p class="text-gray-700"><%= song.year %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </main>
+  </section>
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
-
-    <%= render @artist %>
-
-    <%= link_to "Edit this artist", edit_artist_path(@artist), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this artist", artist_path(@artist), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <%= link_to "Back to artists", artists_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%# <%= link_to "Edit this artist", edit_artist_path(@artist), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%# <div class="inline-block ml-2"> %>
+    <%# <%= button_to "Destroy this artist", artist_path(@artist), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    <%# </div> %>
+    <%# <%= link_to "Back to artists", artists_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>
