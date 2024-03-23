@@ -390,7 +390,13 @@ Song.create!([
         name: "Beautiful",
         artists: [ @urboytj ],
         year: 2016,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "qdZwMhflQAY",
+                version: "Official Audio"
+            })
+        ]
     },
     {
         name: "Villain",
@@ -420,103 +426,217 @@ Song.create!([
         name: "Sorry",
         artists: [ @urboytj ],
         year: 2016,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "obqwuj3pXNQ",
+                version: "Official Audio"
+            })
+        ]
     },
     {
         name: "No Lie",
         artists: [ @urboytj ],
         year: 2017,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "aveY_M0YJbc",
+                version: "Official MV"
+            })
+        ]
     },
     {
         name: "Jeeb",
         artists: [ @urboytj ],
         year: 2017,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "2_oKmj4slq8",
+                version: "OFFICIAL MV"
+            })
+        ]
     },
     {
         name: "Don't",
         artists: [ @urboytj ],
         year: 2017,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "tySuQw_DWFY",
+                version: "Official Lyric Video"
+            })
+        ]
     },
     {
         name: "Do You Mind?",
         artists: [ @urboytj ],
         year: 2017,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "xnBc6Ahl_TQ",
+                version: "OFFICIAL MV"
+            })
+        ]
     },
     {
         name: "ไม่ตอบ",
         artists: [ @urboytj ],
         year: 2018,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "G0S8_el83Uk",
+                version: "OFFICIAL MV"
+            }),
+            YtVideo.new({
+                video_id: "Zg2-H0Z_8vk",
+                version: "Official Lyric Video"
+            })
+        ]
     },
     {
         name: "ไม่อยากนอนคนเดียว",
         artists: [ @urboytj ],
         year: 2018,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "5lEpUC7Ja3E",
+                version: "Official Audio"
+            })
+        ]
     },
     {
-        name: "แบกไม่ไหว",
-        artists: [ @urboytj ],
+        name: "แบกไม่ไหว [Can’t Bear It]",
+        artists: [ @urboytj, @lazyloxy ],
         year: 2018,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "k4nkOblsang",
+                version: "OFFCIAL MV"
+            })
+        ]
     },
     {
         name: "Fake Love",
         artists: [ @urboytj ],
         year: 2019,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "uuxX_6L5Mq4",
+                version: "OFFICIAL MV"
+            }),
+            YtVideo.new({
+                video_id: "fRGl9-KDxyc",
+                version: "Songtopia Livehouse"
+            })
+        ]
     },
     {
-        name: "Stubborn",
+        name: "น้ำเน่า [STUBBORN]",
         artists: [ @urboytj ],
         year: 2019,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "afwQ1nkA7tI",
+                version: "OFFICIAL MV"
+            })
+        ]
     },
     {
         name: "รักปลอม",
         artists: [ @urboytj ],
         year: 2019,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "eUUi2Eexu9Y",
+                version: "OFFCIAL AUDIO"
+            })
+        ]
     },
     {
         name: "ออกมาดิ",
         artists: [ @urboytj ],
         year: 2019,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "YkkPHge6pvk",
+                version: "OFFICIAL MV"
+            })
+        ]
     },
     {
         name: "Ghost",
-        artists: [ @urboytj ],
+        artists: [ @urboytj, @maiyarap ],
         year: 2020,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "cqtj0nQSv-E",
+                version: "OFFCIAL MV (Clean)"
+            }),
+            YtVideo.new({
+                video_id: "6HsqUka_jLI",
+                version: "hin đu đủ's VIETSUB"
+            })
+        ]
     },
     {
         name: "Flex",
         artists: [ @urboytj ],
         year: 2020,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "CLH7l8lDDu0",
+                version: "OFFCIAL MV"
+            })
+        ]
     },
     {
         name: "Ur scent",
         artists: [ @urboytj ],
         year: 2020,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "6LPiBiIjVBM",
+                version: "OFFICIAL MV"
+            })
+        ]
     },
     {
         name: "Together",
         artists: [ @urboytj ],
         year: 2021,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "NJT7qXXdnsY",
+                version: "OFFICIAL MV"
+            })
+        ]
     },
     {
         name: "Life Is A Game",
         artists: [ @urboytj ],
         year: 2022,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "RMWfo2cQSV0",
+                version: "OFFICIAL MV"
+            })
+        ]
     },
     {
         name: "Let me be",
@@ -531,10 +651,16 @@ Song.create!([
         ]
     },
     {
-        name: "Ask who",
+        name: "ถามใคร [ASK WHO]",
         artists: [ @urboytj ],
         year: 2023,
-        distributed_as: "EP"
+        distributed_as: "EP",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "kCBoJJhGCWQ",
+                version: "OFFICIAL MV"
+            })
+        ]
     },
     {
         name: "ช่วยไม่ได้ [CAN'T HELP]",
@@ -560,12 +686,6 @@ Song.create!([
             })
         ]
     },
-    {
-        name: "ธรรมดาแสนพิเศษ / Tummadah Saen Piset (Extraordinary)",
-        artists: [ @anatomyrabbit ],
-        year: 2017,
-        distributed_as: "EP"
-    }
 ])
 
 @urman = Album.create!({

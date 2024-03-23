@@ -1,2 +1,2 @@
-web: bin/rails server
+web: rails db:seed && rake database:make_corresponding_lyrics_files && rake database:seed_lyrics_into_songs && bin/rails server
 css: bin/rails tailwindcss:watch
