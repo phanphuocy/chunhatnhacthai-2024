@@ -66,3 +66,5 @@ group :test do
 end
 
 gem "video_thumb", "~> 0.2.0"
+
+gem "redcarpet"

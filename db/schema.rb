@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_22_112023) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_23_031310) do
   create_table "albums", force: :cascade do |t|
     t.string "name"
     t.integer "year"
@@ -74,6 +74,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_22_112023) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "album_id"
+    t.text "lyrics"
+    t.boolean "has_en_translation", default: false
+    t.boolean "has_vi_translation", default: false
   end
 
   create_table "yt_videos", force: :cascade do |t|

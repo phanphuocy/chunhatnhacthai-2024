@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ article.song_lyrics {
+    .th {
+        color: pink;
+    }
+
+    .ro {
+        color: darkslategray;
+    }
+ }

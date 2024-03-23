@@ -72,21 +72,29 @@
         <p class="text-gray-600">Nghĩ (nhưng không) nghĩ về</p>
       </section>
       <section>
-        <% @song.lyric_parts.each do |part| %>
-          <div class="py-2">
-            <strong class="py-1"><%= part.name %></strong>
-            <div>
-              <% part.lyric_lines.each do |line| %>
-                <p><%= line.thai %></p>
-                <p><%= line.roman %></p>
-                <p><%= line.eng %></p>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
+        <article class="flex flex-col gap-4 song_lyrics">
+          <% if @song.lyrics.present? %>
+            <%= raw(@song.lyrics) %>
+          <% end %>
+        </article>
       </section>
-    </div>
-  </div>
+      <%# %>
+      <%# <section>
+      <%#   <% @song.lyric_parts.each do |part| %>
+        <%#     <div class="py-2">
+      <%#       <strong class="py-1"><%= part.name %></strong>
+      <%#       <div>
+      <%#         <% part.lyric_lines.each do |line| %>
+        <%#           <p><%= line.thai %></p>
+      <%#           <p><%= line.roman %></p>
+    <%#           <p><%= line.eng %></p>
+  <%#         <% end %>
+  <%#       </div>
+      <%#     </div>
+      <%#   <% end %>
+  <%# </section>%>
+</div>
+</div>
 </div>
 <div class="mx-auto md:w-2/3 w-full flex">
   <div class="mx-auto">
