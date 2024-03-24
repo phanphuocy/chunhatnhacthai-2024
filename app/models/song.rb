@@ -10,6 +10,8 @@ class Song < ApplicationRecord
     end
 
     def lyrics_dir_path
+        # puts self.name
+        # puts self.artists[0].name
         "./lib/lyrics" << "/" << self.artists[0].slug
     end
 end

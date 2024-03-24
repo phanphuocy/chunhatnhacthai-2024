@@ -4,6 +4,7 @@ LyricPart.destroy_all
 LyricLine.destroy_all
 YtVideo.destroy_all
 Album.destroy_all
+Song.destroy_all
 
 #--------#
 # Artist #
@@ -179,7 +180,7 @@ Artist.destroy_all
 @lazyloxy = Artist.create({
     name: "LAZYLOXY",
     slug: "lazyloxy",
-introduction: "LAZYLOXY (เลซี่ล็อกซี่) is a Thai rapper, songwriter and actor under Warmlight.\nHe debuted on January 6, 2019 with the digital single \"Morning\".",
+    introduction: "LAZYLOXY (เลซี่ล็อกซี่) is a Thai rapper, songwriter and actor under Warmlight.\nHe debuted on January 6, 2019 with the digital single \"Morning\".",
     nickname: "Top (ท็อป)",
     othername: "LAZYLOXY (เลซี่ล็อกซี่)",
     birthname: "Pathomphop Poonklan (ปฐมภพ พูลกลั่น)",
@@ -238,7 +239,7 @@ introduction: "LAZYLOXY (เลซี่ล็อกซี่) is a Thai rapper,
 @puimek = Artist.create({
     name: "Puimek",
     slug: "puimek",
-introduction: "Puimek (ปุยเมฆ) is a Thai singer, actress and doctor under LOVEiS Entertainment. She debuted on March 31, 2021 with the digital single \"Nee Nee Kang Nai Mee Krai Yoo Mai\".",
+    introduction: "Puimek (ปุยเมฆ) is a Thai singer, actress and doctor under LOVEiS Entertainment. She debuted on March 31, 2021 with the digital single \"Nee Nee Kang Nai Mee Krai Yoo Mai\".",
     nickname: "Puimek (ปุยเมฆ)",
     othername: "PuimekSter",
     birthname: "Napasorn Weerayuttvilai (นภสร วีระยุทธวิไล)",
@@ -364,8 +365,6 @@ p "Generated #{Artist.count} artists."
 #--------#
 # Songs #
 #--------#
-
-Song.destroy_all
 
 Song.create!([
     {
@@ -1172,28 +1171,6 @@ Song.create!([
     ]
 })
 
-@samepage = Song.create!({
-    name: "คิด(แต่ไม่)ถึง [Same Page?]",
-    artists: [ @tillybirds ],
-    year: 2017,
-    distributed_as: "EP"
-})
-
-@samepage.yt_videos = [
-    YtVideo.new({
-        version: "OFFCIAL MV",
-        video_id: "dJ9uVVNWClk"
-    }),
-    YtVideo.new({
-        version: "LYRIC VIDEO",
-        video_id: "V1_LViinG0U"
-    }),
-    YtVideo.new({
-        version: "COVER",
-        video_id: "4QOb3crywJU"
-    })
-]
-
 @rukdaibpao = Song.create!({
     name: "รักได้ป่าว",
     artists: [ @gavind ],
@@ -1406,10 +1383,52 @@ Song.create!([
         ]
     }),
     Song.new({
+        name: "เอายังไง",
+        year: 2020,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("เอายังไง", @wonderframe, 13, Date.new(2020), []),
+    }),
+    Song.new({
+        name: "กะด้อกะเดี้ย",
+        year: 2020,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("กะด้อกะเดี้ย", @wonderframe, 14, Date.new(2020), []),
+    }),
+    Song.new({
+        name: "ขอเป็นแฟนแทนได้มั้ย",
+        year: 2020,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("ขอเป็นแฟนแทนได้มั้ย", @wonderframe, 15, Date.new(2020), []),
+    }),
+    Song.new({
+        name: "จกตา (ตะมอย)",
+        year: 2020,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("จกตา (ตะมอย)", @wonderframe, 16, Date.new(2020), []),
+    }),
+    Song.new({
+        name: "เสียฟอร์มไม่แคร์เสียแกไม่ยอม",
+        year: 2021,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("เสียฟอร์มไม่แคร์เสียแกไม่ยอม", @wonderframe, 17, Date.new(2021), []),
+    }),
+    Song.new({
+        name: "แฟนทิพย์",
+        year: 2021,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("แฟนทิพย์", @wonderframe, 18, Date.new(2021), []),
+    }),
+    Song.new({
+        name: "ตู้เย็น",
+        year: 2021,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("ตู้เย็น", @wonderframe, 19, Date.new(2021), []),
+    }),
+    Song.new({
         name: "Loop",
         year: 2021,
         distributed_as: "Digital single",
-        introduction: "\"เปงเคียด\" là đĩa đơn kỹ thuật số thứ 20 của Wonderframe. Nó được phát hành vào ngày 20 tháng 11 năm 2021.",
+        introduction: construct_simple_digital_single_introduction("Loop", @wonderframe, 20, Date.new(2021,11,20), []),
         yt_videos: [
             YtVideo.new({
                 video_id: "QT4VJL_FORE",
@@ -1422,7 +1441,7 @@ Song.create!([
         romanized_name: "Phaepenphrachopnakhapenfaenkanmai?",
         year: 2022,
         distributed_as: "Digital single",
-        introduction: "\"แพ้เป็นพระชอบนะคะเป็นแฟนกันมั้ย?\" là đĩa đơn kỹ thuật số thứ 21 của Wonderframe. Nó được phát hành vào ngày 10 tháng 9 năm 2022.",
+        introduction: construct_simple_digital_single_introduction("แพ้เป็นพระชอบนะคะเป็นแฟนกันมั้ย?", @wonderframe, 21, Date.new(2022,9,10), []),
         yt_videos: [
             YtVideo.new({
                 video_id: "tVOq3W2uWFs",
@@ -1444,11 +1463,39 @@ Song.create!([
         ]
     }),
     Song.new({
+        name: "Jai Lhua Lhua",
+        romanized_name: "Jai Lhua Lhua",
+        year: 2023,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("Jai Lhua Lhua", @wonderframe, 23, Date.new(2023), []),
+    }),
+    Song.new({
+        name: "OK",
+        romanized_name: "OK",
+        year: 2023,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("OK", @wonderframe, 24, Date.new(2023), []),
+    }),
+    Song.new({
+        name: "Bodak Pink",
+        romanized_name: "Bodak Pink",
+        year: 2023,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("Bodak Pink", @wonderframe, 25, Date.new(2023), []),
+    }),
+    Song.new({
+        name: "Deng",
+        romanized_name: "Deng",
+        year: 2023,
+        distributed_as: "Digital single",
+        introduction: construct_simple_digital_single_introduction("Deng", @wonderframe, 26, Date.new(2023), []),
+    }),
+    Song.new({
         name: "เก้าอี้4ขา [Chair]",
         romanized_name: "Kaoikha",
-        year: 2022,
+        year: 2024,
         distributed_as: "Digital single",
-        introduction: "\"บั้นท้าย\" là đĩa đơn kỹ thuật số thứ 22 của Wonderframe. Nó được phát hành vào ngày 1 tháng 12 năm 2022.",
+        introduction: construct_simple_digital_single_introduction("เก้าอี้4ขา", @wonderframe, 27, Date.new(2024,3,2), []),
         yt_videos: [
             YtVideo.new({
                 video_id: "NApGnEK0j5I",
@@ -1457,6 +1504,70 @@ Song.create!([
         ]
     }),
 ]
+
+@yours_album = Album.create!({
+    name: "YOURS",
+    cover_image_url: "album/yours.png",
+    artist: @wonderframe,
+    year: 2022,
+    songs: [
+        Song.new({
+            name: "So Big",
+            romanized_name: "So Big",
+            artists: [ @wonderframe ],
+            year: 2022,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "S6R2Tfu32O4",
+                    version: "OFFICIAL MV"
+                }),
+                YtVideo.new({
+                    video_id: "Nh0ToXIbyZc",
+                    version: "OFFCIAL VISUALIZER"
+                })
+            ]
+        }),
+        Song.new({
+            name: "คู่ขา [Loverboy]",
+            artists: [ @wonderframe ],
+            distributed_as: "Album",
+            year: 2022,
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "tANo_gMzyfM",
+                    version: "EXCLUSIVE PERFORMANCE"
+                })
+            ]
+        }),
+        Song.new({
+            name: "ขยี้ [Crush]",
+            romanized_name: "Kyeee",
+            artists: [ @wonderframe ],
+            distributed_as: "Album",
+            year: 2022,
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "zgggafR7BNM",
+                    version: "OFFICIAL VIDEO"
+                })
+            ]
+        }),
+        Song.new({
+            name: "lalalalalala",
+            romanized_name: "lalalalalala",
+            artists: [ @wonderframe ],
+            distributed_as: "Album",
+            year: 2022,
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "JdMGHivpZkw",
+                    version: "OFFICIAL VIDEO"
+                })
+            ]
+        }),
+    ]
+})
 
 @oui.songs = [
     Song.new({
@@ -1472,5 +1583,178 @@ Song.create!([
         ]
     })
 ]
+
+@tillybirds.songs = [
+    Song.new({
+        name: "จำเก่ง [Slipped Your Mind]",
+        year: 2021,
+        distributed_as: "Collaboration",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "7iSia7rb1PY",
+                version: "OFFICIAL MV"
+            })
+        ]
+    }),
+]
+
+
+@phudiao = Album.create!({
+    name: "ผู้เดียว Phudiao",
+    artist: @tillybirds,
+    cover_image_url: "album/phudiao.png",
+    year: 2020,
+    songs: [
+        Song.new({
+            name: "ปลายนิ้ว [My Black Mirror]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ฤดูหนาว [Bangkok Winter]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "แค่เธอเข้ามา [Worth The Wait]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "เลิก! [Cut To The Chase!]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ให้กอดของฉันบอกทุกอย่าง [Just So You Know]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ผู้เดียว [The One]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "อยู่ได้ ได้อยู่ [Ineednoone]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "แค่พี่น้อง [Status]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "คิด(แต่ไม่)ถึง [Same Page?]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    version: "OFFCIAL MV",
+                    video_id: "dJ9uVVNWClk"
+                }),
+                YtVideo.new({
+                    version: "LYRIC VIDEO",
+                    video_id: "V1_LViinG0U"
+                }),
+                YtVideo.new({
+                    version: "COVER",
+                    video_id: "4QOb3crywJU"
+                })
+            ],
+        }),
+        Song.new({
+            name: "ยังคงสวยงาม [When The Film's Over]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ผู้เดียว [What's Left... Pt.2]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ฉันมันเป็นใคร [Who I Am]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ไม่รู้สึก [Unspoken]",
+            artists: [ @tillybirds ],
+            year: 2020,
+            distributed_as: "Album"
+        }),
+    ]
+})
+
+@itsgonnabeok = Album.create!({
+    name: "It's Gonna Be OK",
+    artist: @tillybirds,
+    cover_image_url: "album/itsgonnabeok.png",
+    year: 2021,
+    songs: [
+        Song.new({
+            name: "เพื่อนเล่น ไม่เล่นเพื่อน [Just Being Friendly]",
+            artists: [ @tillybirds, @milli ],
+            year: 2021,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ลู่วิ่ง [Can't Keep Up]",
+            artists: [ @tillybirds ],
+            year: 2021,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "เบื่อคนขี้เบื่อ [I'm Not Boring, You're Just Bored]",
+            artists: [ @tillybirds ],
+            year: 2021,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "เดอะแบก [Baggage]",
+            artists: [ @tillybirds ],
+            year: 2021,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ติดตรงที่ฉัน [It's Not You, It's Me]",
+            artists: [ @tillybirds ],
+            year: 2021,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ขอให้เธอโชคดี [Send You Off]",
+            artists: [ @tillybirds ],
+            year: 2021,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "เธอไม่ได้อยู่คนเดียว [On My Shoulder]",
+            artists: [ @tillybirds, @milli ],
+            year: 2021,
+            distributed_as: "Album"
+        }),
+        Song.new({
+            name: "ถ้าเราเจอกันอีก [Until Then]",
+            artists: [ @tillybirds ],
+            year: 2021,
+            distributed_as: "Album"
+        }),
+    ]
+})
 
 p "Generated #{Song.count} songs."

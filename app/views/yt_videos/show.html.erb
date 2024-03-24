@@ -59,8 +59,12 @@
             </header>
             <main class="py-2 grid grid-cols-4 gap-3 item-stretch">
               <% @song.album.songs.each do |track| %>
-                <%= link_to song_yt_video_path(track, track.yt_videos[0]) do %>
-                  <%= track.name %>
+                <% if track.yt_videos.present? %>
+                  <%= link_to song_yt_video_path(track, track.yt_videos[0]) do %>
+                    <%= track.name %>
+                  <% end %>
+                <% else %>
+                  <span class="text-gray-600"><%= track.name %></span>
                 <% end %>
               <% end %>
             </main>

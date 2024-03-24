@@ -37,3 +37,7 @@ end
 def check_if_song_has_vi_translation(text)
     text.include? "vi/ "
 end
+
+def construct_simple_digital_single_introduction(song_name, artist, number, date, featuring) 
+    "\"#{song_name}\" là đĩa đơn kỹ thuật số thứ #{number} của #{artist.name}. Nó được phát hành vào ngày #{date}."
+end
