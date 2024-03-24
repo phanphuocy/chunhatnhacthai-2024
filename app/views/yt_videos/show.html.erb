@@ -17,16 +17,18 @@
               <% end %>
             </div>
             <div class="p-4">
-              <h1 class="font-bold text-xl"><%= @song.name %></h1>
+              <h1 class="font-bold text-xl"><%= @song.name %>
+                <span class="border border-gray-700 border-solid p-1 text-xs font-regular rounded"><%= @song.distributed_as %></span>
+              </h1>
               <% @song.artists.each do |artist| %>
                 <%= link_to artist do %>
                   <h3 class="underline"><%= artist.name %></h3>
                 <% end%>
               <% end%>
               <article class="py-4 text-sm text-gray-700">
-                <p>"Same Page?" là đĩa đơn kỹ thuật số thứ bảy của Tilly Birds, được phát hành vào ngày 26/2/2020.</p>
-                <p>Vào ngày 3/3/2020, lyrics video bài hát "Same Page?" đã vượt qua cột mốc đầu tiên là 1 triệu lượt xem, sáu ngày sau khi phát hành. Video âm nhạc sau đó đã đạt được 1 triệu lượt xem trong vòng 4 ngày sau khi phát hành vào ngày 20/3. Vào ngày 3/8, MV chính thức đạt 50 triệu lượt xem trên YouTube.</p>
-                <p>Bài hát đã đứng đầu danh sách phát Top 50 Thái Lan của Spotify vào ngày 22/3.</p>
+                <% if @song.introduction.present? %>
+                  <%= @song.introduction %>
+                <% end %>
               </article>
             </div>
           </div>
@@ -69,7 +71,9 @@
     <div class="w-2/5 p-4 border border-gray-200 border-solid">
       <section class="py-3">
         <h1 class="font-bold text-xl"><%= @song.name %></h1>
-        <p class="text-gray-600">Nghĩ (nhưng không) nghĩ về</p>
+        <% if @song.romanized_name.present? %>
+          <p class="text-gray-600"><%= @song.romanized_name %></p>
+        <% end %>
       </section>
       <section>
         <article class="flex flex-col gap-4 song_lyrics">

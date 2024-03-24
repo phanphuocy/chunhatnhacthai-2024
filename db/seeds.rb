@@ -343,6 +343,20 @@ introduction: "Puimek (ปุยเมฆ) is a Thai singer, actress and doctor 
     instagram_url: "https://www.instagram.com/stampapiwat/",
 })
 
+@oui = Artist.create({
+    name: "Oui Buddhabless",
+    slug: "oui",
+    introduction: "",
+    nickname: "Oui",
+    othername: "Natee Ekwijit",
+    birthday: Date.new(1979, 4, 14),
+    birthplace: "Bangkok, Thái Lan",
+    zodiac: "Aries",
+    facebook_url: "https://www.facebook.com/ouibuddhabless",
+    instagram_url: "https://www.instagram.com/guioui/",
+})
+
+
 p "Generated #{Artist.count} artists."
 
 
@@ -358,7 +372,7 @@ Song.create!([
         name: "Rebound",
         artists: [ @urboytj ],
         year: 2016,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "ApXsKExKQIM",
@@ -374,7 +388,7 @@ Song.create!([
         name: "Loud",
         artists: [ @urboytj ],
         year: 2016,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "LYOzMdSgb_I",
@@ -390,7 +404,7 @@ Song.create!([
         name: "Beautiful",
         artists: [ @urboytj ],
         year: 2016,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "qdZwMhflQAY",
@@ -402,7 +416,7 @@ Song.create!([
         name: "Villain",
         artists: [ @urboytj ],
         year: 2016,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "ndLC2tPFmg4",
@@ -414,7 +428,7 @@ Song.create!([
         name: "DeeDeeDi",
         artists: [ @urboytj ],
         year: 2016,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "Be-twvDUJSw",
@@ -426,7 +440,7 @@ Song.create!([
         name: "Sorry",
         artists: [ @urboytj ],
         year: 2016,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "obqwuj3pXNQ",
@@ -438,7 +452,7 @@ Song.create!([
         name: "No Lie",
         artists: [ @urboytj ],
         year: 2017,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "aveY_M0YJbc",
@@ -450,7 +464,7 @@ Song.create!([
         name: "Jeeb",
         artists: [ @urboytj ],
         year: 2017,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "2_oKmj4slq8",
@@ -462,7 +476,7 @@ Song.create!([
         name: "Don't",
         artists: [ @urboytj ],
         year: 2017,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "tySuQw_DWFY",
@@ -474,7 +488,7 @@ Song.create!([
         name: "Do You Mind?",
         artists: [ @urboytj ],
         year: 2017,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "xnBc6Ahl_TQ",
@@ -486,7 +500,7 @@ Song.create!([
         name: "ไม่ตอบ",
         artists: [ @urboytj ],
         year: 2018,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "G0S8_el83Uk",
@@ -502,7 +516,7 @@ Song.create!([
         name: "ไม่อยากนอนคนเดียว",
         artists: [ @urboytj ],
         year: 2018,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "5lEpUC7Ja3E",
@@ -514,7 +528,7 @@ Song.create!([
         name: "แบกไม่ไหว [Can’t Bear It]",
         artists: [ @urboytj, @lazyloxy ],
         year: 2018,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "k4nkOblsang",
@@ -526,7 +540,7 @@ Song.create!([
         name: "Fake Love",
         artists: [ @urboytj ],
         year: 2019,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "uuxX_6L5Mq4",
@@ -542,7 +556,7 @@ Song.create!([
         name: "น้ำเน่า [STUBBORN]",
         artists: [ @urboytj ],
         year: 2019,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "afwQ1nkA7tI",
@@ -554,7 +568,7 @@ Song.create!([
         name: "รักปลอม",
         artists: [ @urboytj ],
         year: 2019,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "eUUi2Eexu9Y",
@@ -566,7 +580,7 @@ Song.create!([
         name: "ออกมาดิ",
         artists: [ @urboytj ],
         year: 2019,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "YkkPHge6pvk",
@@ -578,7 +592,7 @@ Song.create!([
         name: "Ghost",
         artists: [ @urboytj, @maiyarap ],
         year: 2020,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "cqtj0nQSv-E",
@@ -594,7 +608,7 @@ Song.create!([
         name: "Flex",
         artists: [ @urboytj ],
         year: 2020,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "CLH7l8lDDu0",
@@ -606,7 +620,7 @@ Song.create!([
         name: "Ur scent",
         artists: [ @urboytj ],
         year: 2020,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "6LPiBiIjVBM",
@@ -618,7 +632,7 @@ Song.create!([
         name: "Together",
         artists: [ @urboytj ],
         year: 2021,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "NJT7qXXdnsY",
@@ -630,7 +644,7 @@ Song.create!([
         name: "Life Is A Game",
         artists: [ @urboytj ],
         year: 2022,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "RMWfo2cQSV0",
@@ -642,7 +656,7 @@ Song.create!([
         name: "Let me be",
         artists: [ @urboytj ],
         year: 2022,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 version: "OFFICIAL VIDEO",
@@ -654,7 +668,7 @@ Song.create!([
         name: "ถามใคร [ASK WHO]",
         artists: [ @urboytj ],
         year: 2023,
-        distributed_as: "EP",
+        distributed_as: "Digital single",
         yt_videos: [
             YtVideo.new({
                 video_id: "kCBoJJhGCWQ",
@@ -663,26 +677,90 @@ Song.create!([
         ]
     },
     {
-        name: "ช่วยไม่ได้ [CAN'T HELP]",
+        name: "จิ๊กโก๋ [JIGGO]",
         artists: [ @urboytj ],
-        year: 2021,
-        distributed_as: "Album",
+        year: 2017,
+        distributed_as: "Collaboration",
         yt_videos: [
             YtVideo.new({
-                video_id: "9ILGRXrauB8",
+                video_id: "ZL0QEqRmHuI",
+                version: "OFFICIAL MV"
+            })
+        ]
+    },
+    {
+        name: "Okay",
+        artists: [ @urboytj ],
+        year: 2017,
+        distributed_as: "Collaboration",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "AoNKWv3KZSM",
+                version: "OFFICIAL MV"
+            })
+        ]
+    },
+    {
+        name: "Get Drunk",
+        artists: [ @urboytj ],
+        year: 2018,
+        distributed_as: "Collaboration",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "bmRK13Z4dcc",
+                version: "OFFICIAL MV"
+            })
+        ]
+    },
+    {
+        name: "TMRW",
+        artists: [ @urboytj ],
+        year: 2018,
+        distributed_as: "Collaboration",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "uUT45SF9q7Y",
+                version: "OFFICIAL MV"
+            })
+        ]
+    },
+    {
+        name: "ปล่อยเธอไป",
+        artists: [ @urboytj ],
+        year: 2019,
+        distributed_as: "Collaboration",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "S3Xp9KJEeCE",
+                version: "OFFICIAL MV"
+            })
+        ]
+    },
+    {
+        name: "FACT",
+        artists: [ @lazyloxy, @maiyarap, @oganic, @urboytj ],
+        year: 2020,
+        distributed_as: "Collaboration",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "KC1IQV74Pds",
+                version: "OFFICIAL MV"
+            })
+        ]
+    },
+    {
+        name: "MONEY HONEY",
+        artists: [ @fhero, @urboytj ],
+        year: 2021,
+        distributed_as: "Collaboration",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "Lx4ka2qBY_A",
                 version: "OFFICIAL MV"
             }),
             YtVideo.new({
-                video_id: "VaaMcW_-RPA",
-                version: "OFFICIAL VISUALIZER"
-            }),
-            YtVideo.new({
-                video_id: "OmSMerHTWok",
-                version: "LIVE PERFORMANCE"
-            }),
-            YtVideo.new({
-                video_id: "Gme-aFpnZ7M",
-                version: "Official Live Performance"
+                video_id: "pnW2Lexomds",
+                version: "T-POP Stage"
             })
         ]
     },
@@ -897,6 +975,203 @@ Song.create!([
     ]
 })
 
+@selfmade = Album.create!({
+    name: "Selfmade",
+    year: 2020,
+    artist: @urboytj,
+    cover_image_url: "album/selfmade.jpeg",
+    songs: [
+        Song.new({
+            name: "ชูมือขึ้น [HANDS UP]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "ZGr0aO7_oBc",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "ถามคำ [QUESTION?]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    version: "OFFICIAL VISUALIZER",
+                    video_id: "E0IfcXBxyic"
+                }),
+                YtVideo.new({
+                    version: "COVER",
+                    video_id: "nh_07BJ-ZKk"
+                }),
+                YtVideo.new({
+                    version: "T-POP STAGE",
+                    video_id: "idOr2H0IqxA"
+                }),
+                YtVideo.new({
+                    version: "Official Live Performance",
+                    video_id: "OdnFzhz0A64"
+                }),
+                YtVideo.new({
+                    version: "REMIX",
+                    video_id: "yLYKTLeFnug"
+                }),
+                YtVideo.new({
+                    version: "Songtopia Livehouse",
+                    video_id: "wQUeCcxNhWo"
+                }),
+                YtVideo.new({
+                    version: "COVER",
+                    video_id: "DrW7n1pjXFY"
+                })
+            ]
+        }),
+        Song.new({
+            name: "อยู่ก่อน [STAY]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "oFSvmFA3n0s",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "ช่วยไม่ได้ [CAN'T HELP]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "9ILGRXrauB8",
+                    version: "OFFICIAL MV"
+                }),
+                YtVideo.new({
+                    video_id: "VaaMcW_-RPA",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+                YtVideo.new({
+                    video_id: "OmSMerHTWok",
+                    version: "LIVE PERFORMANCE"
+                }),
+                YtVideo.new({
+                    video_id: "Gme-aFpnZ7M",
+                    version: "Official Live Performance"
+                })
+            ]
+        }),
+        Song.new({
+            name: "กอดได้ไหม [ONE LAST TIME]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "YuMz7wQBKD8",
+                    version: "OFFICIAL MV"
+                }),
+                YtVideo.new({
+                    video_id: "JkYvOnBsXmI",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "SELFMADE",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "U-XGnDwuykE",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "ซุปเปอร์ไซย่า [SUPER SAIYAN]",
+            artists: [ @urboytj, @maiyarap],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "awoXHU4AKWo",
+                    version: "OFFICIAL MV"
+                }),
+                YtVideo.new({
+                    video_id: "h6R1JcE-AU4",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "รับให้ได้ [TAKE IT]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "0_snyMjGOl8",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "ยิ่งเกลียดยิ่งรัก [LOVE YOU, HATE YOU]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "hxJ2NjOc7Cg",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "สักวัน [ONE DAY]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "KrZZE_TQPSA",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "หลับตา [GOODNIGHT]",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "wle_R3wsjY0",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+        Song.new({
+            name: "SAD ONE (BONUS TRACK)",
+            artists: [ @urboytj ],
+            year: 2020,
+            distributed_as: "Album",
+            yt_videos: [
+                YtVideo.new({
+                    video_id: "dan5O2zmTpM",
+                    version: "OFFICIAL VISUALIZER"
+                }),
+            ]
+        }),
+    ]
+})
+
 @samepage = Song.create!({
     name: "คิด(แต่ไม่)ถึง [Same Page?]",
     artists: [ @tillybirds ],
@@ -918,46 +1193,6 @@ Song.create!([
         video_id: "4QOb3crywJU"
     })
 ]
-
-@question = Song.create!({
-    name: "ถามคำ [QUESTION?]",
-    artists: [ @urboytj ],
-    year: 2021,
-    distributed_as: "Single",
-    lyrics: markdown_to_html(File.read("lib/lyrics/urboytj/ถามคำ [QUESTION?].md")),
-    has_en_translation: check_if_song_has_en_translation(File.read("lib/lyrics/urboytj/ถามคำ [QUESTION?].md")),
-    has_vi_translation: check_if_song_has_vi_translation(File.read("lib/lyrics/urboytj/ถามคำ [QUESTION?].md")),
-    yt_videos: [
-        YtVideo.new({
-            version: "OFFICIAL VISUALIZER",
-            video_id: "E0IfcXBxyic"
-        }),
-        YtVideo.new({
-            version: "COVER",
-            video_id: "nh_07BJ-ZKk"
-        }),
-        YtVideo.new({
-            version: "T-POP STAGE",
-            video_id: "idOr2H0IqxA"
-        }),
-        YtVideo.new({
-            version: "Official Live Performance",
-            video_id: "OdnFzhz0A64"
-        }),
-        YtVideo.new({
-            version: "REMIX",
-            video_id: "yLYKTLeFnug"
-        }),
-        YtVideo.new({
-            version: "Songtopia Livehouse",
-            video_id: "wQUeCcxNhWo"
-        }),
-        YtVideo.new({
-            version: "COVER",
-            video_id: "DrW7n1pjXFY"
-        })
-    ],
-})
 
 @rukdaibpao = Song.create!({
     name: "รักได้ป่าว",
@@ -990,9 +1225,252 @@ Song.create!([
             version: "LYRIC VIDEO",
             video_id: "d58dAfkkP3s"
         })
-    ],
-    lyrics: markdown_to_html(File.read("lib/lyrics/palmy/ดวงใจ [Heart].md")),
-    has_en_translation: check_if_song_has_en_translation(File.read("lib/lyrics/palmy/ดวงใจ [Heart].md")),
-    has_vi_translation: check_if_song_has_vi_translation(File.read("lib/lyrics/palmy/ดวงใจ [Heart].md")),
-    
+    ],    
 })
+
+@wonderframe.songs = [
+    Song.new({
+        name: "อยู่ดีๆก็... [Line...]",
+        year: 2017,
+        distributed_as: "Digital single",
+        introduction: "\"Line...\" (อยู่ดีๆก็...) là đĩa đơn kỹ thuật số đầu tay của Wonderframe. Nó được phát hành vào ngày 1 tháng 12 năm 2017 và feature YOUNGOHM.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "2-KIxNNrJwc",
+                version: "OFFICIAL MV"
+            })
+        ]
+    }),
+    Song.new({
+        name: "555 (ToT)",
+        year: 2018,
+        distributed_as: "Digital single",
+        introduction: "\"555 (ToT)\" là đĩa đơn kỹ thuật số thứ hai của Wonderframe. Nó được phát hành vào ngày 16 tháng 3 năm 2018.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "diVNp83vhbo",
+                version: "OFFICIAL MV"
+            }),
+            YtVideo.new({
+                video_id: "pngi_mOXAhI",
+                version: "Live "
+            })
+        ]
+    }),
+    Song.new({
+        name: "กลั้นใจ [Breath]",
+        year: 2018,
+        distributed_as: "Digital single",
+        introduction: "\"Breath\" (กลั้นใจ) là đĩa đơn kỹ thuật số thứ ba của Wonderframe. Nó được phát hành vào ngày 20 tháng 7 năm 2018 và có sự góp mặt của F.HERO.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "kdGW2HGOyWM",
+                version: "OFFICIAL MV"
+            }),
+            YtVideo.new({
+                video_id: "_aZcLYeMIP4",
+                version: "YouTube Music Sessions"
+            })
+        ]
+    }),
+    Song.new({
+        name: "อู้ว นา นา [Ouu Na Na]",
+        year: 2018,
+        distributed_as: "Digital single",
+        introduction: "\"Ouu Na Na\" (อู้ว นา นา) là đĩa đơn kỹ thuật số thứ tư của Wonderframe. Nó được phát hành vào ngày 7 tháng 9 năm 2018 và có sự góp mặt của FIIXD.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "qWUk6R8iS7A",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "สุดท้ายก็หมา [At The End, (I'm) A Dog 🐶]",
+        romanized_name: "Sutthaikoma",
+        year: 2018,
+        distributed_as: "Digital single",
+        introduction: "\"สุดท้ายก็หมา\" là đĩa đơn kỹ thuật số thứ năm của Wonderframe, được phát hành vào ngày 9 tháng 11 năm 2018 và có sự góp mặt của DLK.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "VRv8iim_jzI",
+                version: "OFFICIAL MV"
+            }),
+            YtVideo.new({
+                video_id: "y5EjqfvTUwo",
+                version: "YouTube Music Sessions"
+            }),
+            YtVideo.new({
+                video_id: "eJdT-3K0B5M",
+                version: "Acoustic Guitar"
+            }),
+            YtVideo.new({
+                video_id: "ljORxow7Lf4",
+                version: "Behind the Scenes"
+            })
+        ]
+    }),
+    Song.new({
+        name: "เขาไปแล้ว",
+        romanized_name: "Khaopailaeo",
+        year: 2019,
+        distributed_as: "Digital single",
+        introduction: "\"เขาไปแล้ว\" là đĩa đơn kỹ thuật số thứ sáu của Wonderframe. Nó được phát hành vào ngày 22 tháng 2 năm 2019 và có sự góp mặt của Arm Chutima.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "paIrJvhXFXU",
+                version: "OFFICIAL MV"
+            }),
+            YtVideo.new({
+                video_id: "Fn0S6fKpg6Y",
+                version: "Official Live Performance"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "อยากอยู่คนเดียว? [Want to be alone?]",
+        romanized_name: "Ayakayuknadiao?",
+        year: 2019,
+        distributed_as: "Digital single",
+        introduction: "\"อยากอยู่คนเดียว?\" là đĩa đơn kỹ thuật số thứ bảy của Wonderframe, được phát hành vào ngày 2 tháng 8 năm 2019.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "xuuuK1tbJ-w",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "แผ่เมตตา [Be compassionate]",
+        romanized_name: "Phae metta",
+        year: 2019,
+        distributed_as: "Digital single",
+        introduction: "\"แผ่เมตตา\" (nghĩa đen là Hãy từ bi) là đĩa đơn kỹ thuật số thứ tám của Wonderframe, được phát hành vào ngày 13 tháng 9 năm 2019.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "ZJNI3vBZvqc",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "ฮักจัดหนัก [Very hard]",
+        romanized_name: "Hakchatnak",
+        year: 2019,
+        distributed_as: "Digital single",
+        introduction: "\"ฮักจัดหนัก\" là đĩa đơn kỹ thuật số thứ chín của Wonderframe. Nó được phát hành vào ngày 5 tháng 10 năm 2019 và có sự góp mặt của D.O.PE.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "1bniMa6gz1Q",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "ไม่มีไม่ตาย [No no death]",
+        romanized_name: "Maimimaitai",
+        year: 2020,
+        distributed_as: "Digital single",
+        introduction: "\"ฮักจัดหนัก\" là đĩa đơn kỹ thuật số thứ mười của Wonderframe. Nó được phát hành vào ngày 25 tháng 1 năm 2020 và có sự góp mặt của RachYO.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "zEr9zWsAwiQ",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "ไม่อยากเป็นพี่น้อง [I don't want to be siblings]",
+        romanized_name: "Maiayakpenphinong",
+        year: 2020,
+        distributed_as: "Digital single",
+        introduction: "\"ไม่อยากเป็นพี่น้อง\" là đĩa đơn kỹ thuật số thứ 11 của Wonderframe. Nó được phát hành vào ngày 14 tháng 2 năm 2020 và có sự góp mặt của Chipcorns..",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "ajUcqlUVjY8",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "เปงเคียด",
+        romanized_name: "Pengkhiat",
+        year: 2020,
+        distributed_as: "Digital single",
+        introduction: "\"เปงเคียด\" là đĩa đơn kỹ thuật số thứ mười hai của Wonderframe. Nó được phát hành vào ngày 28 tháng 3 năm 2020 và có sự góp mặt của SPIDERMEI.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "ze5qE9Kpm-I",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "Loop",
+        year: 2021,
+        distributed_as: "Digital single",
+        introduction: "\"เปงเคียด\" là đĩa đơn kỹ thuật số thứ 20 của Wonderframe. Nó được phát hành vào ngày 20 tháng 11 năm 2021.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "QT4VJL_FORE",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "แพ้เป็นพระชอบนะคะเป็นแฟนกันมั้ย? [Losing to be a monk. Do you like me as a lover?]",
+        romanized_name: "Phaepenphrachopnakhapenfaenkanmai?",
+        year: 2022,
+        distributed_as: "Digital single",
+        introduction: "\"แพ้เป็นพระชอบนะคะเป็นแฟนกันมั้ย?\" là đĩa đơn kỹ thuật số thứ 21 của Wonderframe. Nó được phát hành vào ngày 10 tháng 9 năm 2022.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "tVOq3W2uWFs",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "บั้นท้าย [Twerk]",
+        romanized_name: "Ban thai",
+        year: 2022,
+        distributed_as: "Digital single",
+        introduction: "\"บั้นท้าย\" là đĩa đơn kỹ thuật số thứ 22 của Wonderframe. Nó được phát hành vào ngày 1 tháng 12 năm 2022.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "z037MTfllZI",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+    Song.new({
+        name: "เก้าอี้4ขา [Chair]",
+        romanized_name: "Kaoikha",
+        year: 2022,
+        distributed_as: "Digital single",
+        introduction: "\"บั้นท้าย\" là đĩa đơn kỹ thuật số thứ 22 của Wonderframe. Nó được phát hành vào ngày 1 tháng 12 năm 2022.",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "NApGnEK0j5I",
+                version: "OFFICIAL MV"
+            }),
+        ]
+    }),
+]
+
+@oui.songs = [
+    Song.new({
+        name: "เก้าอี้4ขา [Just the Top of the Line]",
+        romanized_name: "Dtua Top Tao Nun",
+        year: 2019,
+        distributed_as: "Digital single",
+        yt_videos: [
+            YtVideo.new({
+                video_id: "y0qG2OVvhlg",
+                version: "OFFICIAL MV"
+            })
+        ]
+    })
+]
+
+p "Generated #{Song.count} songs."
