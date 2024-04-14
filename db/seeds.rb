@@ -357,6 +357,16 @@ Artist.destroy_all
     instagram_url: "https://www.instagram.com/guioui/",
 })
 
+@dgerrard = Artist.create!({
+    name: "D Gerrard",
+    slug: "dgerrard",
+    introduction: "D Gerrard (ดี เจอร์ราร์ด) is a Thai singer under Wayfer Records. He debuted on November 24, 2017 with the digital single \"Galaxy\".,",
+    nickname: "Big (บิ๊ก)",
+    othername: "D Gerrard (ดี เจอร์ราร์ด)",
+    birthname: "Ukrit Willibrord Dongabriel (อุกฤษ วิลลีย์บรอด ดอนกาเบรียล)",
+    birthday: Date.new(1993, 6, 20),
+    zodiac: "Gemini"
+})
 
 p "Generated #{Artist.count} artists."
 
@@ -1756,5 +1766,138 @@ Song.create!([
         }),
     ]
 })
+
+@dgerrard.songs = [
+    Song.new({
+        name: "Galaxy",
+        year: 2017,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Mangmao",
+        year: 2018,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Ban Nok",
+        year: 2018,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "My Girl",
+        year: 2018,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Casanova Boy",
+        year: 2018,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "It's Not Me",
+        year: 2018,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Hey Bae",
+        year: 2019,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Come with Me",
+        year: 2019,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Maya",
+        year: 2019,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Galaxy",
+        year: 2019,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Rattikarn",
+        year: 2019,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Partners",
+        year: 2019,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Common",
+        year: 2020,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Ask",
+        year: 2020,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Home",
+        year: 2020,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Bouquet of Flower",
+        year: 2020,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Scientist",
+        year: 2021,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Isekai",
+        year: 2021,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Magic", 
+        year: 2021,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Roo Yoo",
+        year: 2022,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Luxury",
+        year: 2022,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Talk Less",
+        year: 2022,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "The Reason Why I Live",
+        year: 2022,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Paradise Online",
+        year: 2023,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Galaxy Express",
+        year: 2023,
+        distributed_as: "Digital single"
+    }),
+    Song.new({
+        name: "Eaaaddd",
+        year: 2024,
+        distributed_as: "Digital single"
+    }),
+]
 
 p "Generated #{Song.count} songs."
